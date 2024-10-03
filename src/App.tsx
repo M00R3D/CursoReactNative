@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ObjectLiterals } from './typescript'
+import { BasicFunctions, ObjectLiterals } from './typescript'
 
 function App() {
   // const [count, setCount] = useState(0) 
@@ -8,7 +8,8 @@ function App() {
     <main>
       {/* <h1>Introduccion a REACT</h1> */}
       {/* <BasicTypes/> */}
-      <ObjectLiterals/>
+      {/* <ObjectLiterals/> */}
+      <BasicFunctions/>
     </main>
   )
 }
