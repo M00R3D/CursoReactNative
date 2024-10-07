@@ -1,5 +1,8 @@
-import { useState } from 'react'
-import { BasicFunctions, ObjectLiterals } from './typescript'
+// import { useState } from 'react'
+import 
+{
+    CounterWithHook
+   } from './hooks'
 
 function App() {
   // const [count, setCount] = useState(0) 
@@ -9,7 +12,8 @@ function App() {
       {/* <h1>Introduccion a REACT</h1> */}
       {/* <BasicTypes/> */}
       {/* <ObjectLiterals/> */}
-      <BasicFunctions/>
+      {/* <BasicFunctions/> */}
+      <CounterWithHook/>
     </main>
   )
 }
