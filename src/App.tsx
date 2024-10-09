@@ -1,8 +1,13 @@
 // import { useState } from 'react'
-import 
+// import 
+// {
+//     CounterWithHook
+//    } from './hooks'
+
+   import 
 {
-    CounterWithHook
-   } from './hooks'
+    LoginPage
+   } from './components'
 
 function App() {
   // const [count, setCount] = useState(0) 
@@ -13,7 +18,8 @@ function App() {
       {/* <BasicTypes/> */}
       {/* <ObjectLiterals/> */}
       {/* <BasicFunctions/> */}
-      <CounterWithHook/>
+      {/* <CounterWithHook/> */}
+      <LoginPage/>
     </main>
   )
 }
