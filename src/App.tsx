@@ -6,7 +6,7 @@
 
    import 
 {
-    LoginPage
+    UsersPage
    } from './components'
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
       {/* <ObjectLiterals/> */}
       {/* <BasicFunctions/> */}
       {/* <CounterWithHook/> */}
-      <LoginPage/>
+      <UsersPage/>
     </main>
   )
 }
