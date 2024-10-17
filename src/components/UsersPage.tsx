@@ -2,11 +2,24 @@ import React, { useEffect } from 'react'
 import axios from 'axios';
 import { ReqResUserListResponse } from '../interfaces';
 
+const loadUsers =async()=>{
+    try {
+        const {data} =await axios.get<ReqResUserListResponse>('https://reqres.in/api/users');
+        return data.data;
+    } catch (error) {
+        console.log(error)    
+        return []
+    }
+}
+
+
+
 export const UsersPage = () => {
 
     useEffect(()=>{
-        axios.get<ReqResUserListResponse>('https://reqres.in/api/users?page=2') 
-            .then(resp=>console.log(resp.data.data[0]));
+        // axios.get<ReqResUserListResponse>('https://reqres.in/api/users?page=2') 
+        //     .then(resp=>console.log(resp.data.data[0]));
+        loadUsers().then(users=>console.log(users));
     },[])
   return (
     <>
