@@ -6,6 +6,7 @@
 
    import 
 {
+  FormsPage,
     UsersPage
    } from './components'
 
@@ -19,7 +20,8 @@ function App() {
       {/* <ObjectLiterals/> */}
       {/* <BasicFunctions/> */}
       {/* <CounterWithHook/> */}
-      <UsersPage/>
+      {/* <UsersPage/> */}
+      <FormsPage/>
     </main>
   )
 }
