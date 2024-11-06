@@ -1,5 +1,5 @@
 import React from 'react'
-import {useForm} from 'react-from-hook'
+import {useForm} from 'react-hook-form'
 
 
 type FormInputs = {
@@ -9,22 +9,28 @@ type FormInputs = {
 
 export const FormsPage = () => {
 
-  const {register} = useForm<FormInputs>({
+  const {register,handleSubmit,formState,watch} = useForm<FormInputs>({
     defaultValues:{
       email:'job@mail.com',
       password:'666',
     }
   });
 
+const onSubmit=(myForm:FormInputs)=>{
+  console.log({myForm});
+  console.log(watch('email'));
+  
+}
+
   return (
     <>
-        <form action="">
+        <form onSubmit={handleSubmit(onSubmit)}>
             <h3>Formularios</h3>
 
         <div style={{display: 'flex', flexDirection:'column'}}>
-            <input type="text" placeholder='email' />
+            <input type="text" placeholder='Email' {...register('email',{required:true})}/>
 
-            <input type="text" placeholder='password'/>
+            <input type="text" placeholder='password' {...register('password')}/>
 
 
             <button type='submit'>Ingresar</button>
@@ -35,6 +41,9 @@ export const FormsPage = () => {
 
 
         </form>
+        <pre>
+          {JSON.stringify(formState,null,2)}
+        </pre>
     </>
 
   )
